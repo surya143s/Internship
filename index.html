@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+       body
+       {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, rgb(239, 104, 127), rgb(249, 152, 168));
+       }
+       .login-form
+       { width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius:5px ;
+       margin:100px auto;
+       border: 1px solid #ccc;
+       background-color: white;
+       }
+       input
+       {
+        height: 40px;
+        width: 400px;
+        border: 1px solid #ccc;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 5px;
+       }
+       textarea
+       {
+        height: 60px;
+        width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+       }
+
+       button
+       {
+        width: 200px;
+        height: 40px;
+        margin: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(227, 47, 77);
+        border-radius: 10px;
+        color: white;
+       }
+       table
+       {
+        border-spacing:10px ;
+       }
+    </style>
+</head>
+<body>
+    <form class="login-form" action="">
+         <h3>Registration Form</h3>
+        <table>
+            <tr class="he" >
+                <td><label for="">First Name :</label></td>
+                <td><input type="text" placeholder="First Name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Last Name :</label></td>
+                <td><input type="text" placeholder="Last Name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Gmail :</label></td>
+                <td><input type="email" placeholder="Gmail"></td>
+            </tr>
+             <tr>
+                <td><label for="">Password :</label></td>
+                <td> <input type="password" placeholder="Password"></td>
+            </tr>
+             <tr>
+                <td><label for="">Conform Password :</label></td>
+                <td><input type="password" placeholder="Conform Password"></td>
+            </tr>
+             <tr>
+                <td><label for="">Phone Number :</label></td>
+                <td> <input type="number" placeholder="Phone Number"></td>
+            </tr>
+             <tr>
+                <td><label for="">Address :</label></td>
+                <td><textarea name="" id="" placeholder="Address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">PinCode :</label></td>
+                <td><input type="number" placeholder="PinCode"></td>
+            </tr>
+            <tr> 
+                <td><label for="">Bio :</label></td>
+                <td><textarea name="" id="" placeholder="Bio"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+       
+       <button>Submit</button>
+    </form>
+</body>
+</html>
