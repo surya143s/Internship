@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #978181;
+}
+
+.main-container {
+    background-color: antiquewhite;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btns button {
+    margin-left: 10px;
+    border: 1px solid #595252;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    background: none;
+}
+
+/* Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+/* Image styles */
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Box styles */
+.box {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.box h3 {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Large box (first image) spans 2 columns */
+.box-large {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-wrap: wrap;
+    }
+
+    .btns {
+        margin-top: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .box-large {
+        grid-column: span 1;
+    }
+}
