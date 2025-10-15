@@ -6,12 +6,12 @@
 }
 body
 {
-   background-image: url(img-back.jpg);  
+   /* background-image: url(img-back.jpg);  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh; 
-    /* background: linear-gradient(to right ,rgb(241, 159, 172) ,rgb(195, 120, 193)); */
+    height: 100vh;  */
+     background: linear-gradient(to right ,rgba(245, 215, 114, 0.784) ,rgba(244, 159, 32, 0.601)); 
 }
 /* nav bar */
 nav
@@ -44,9 +44,11 @@ a:hover
 {
     color: rgb(69, 64, 64);
 }
+/* button */
 .btns button
 {
-    border: 1px solid rgb(217, 207, 207);
+     border: 2px solid rgba(255, 132, 0, 0.435); 
+    outline: none;
     background: none;
     padding: 15px;
     width: 150px;
@@ -54,10 +56,35 @@ a:hover
     border-radius:5px;
     cursor: pointer;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
+    position: relative;
+    /* box-shadow: 0px 1px 10px 1px; */
    
 }
+.log-bt
+{
+    position: relative;
+}
+.log-bt::after
+{
+    content: "";
+    background-color: aquamarine;
+    z-index:-1 ;
+     width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+      transform: rotate(30deg);
+}
 
+/* logo name */
+.logo-name
+{
+    color: red;
+    letter-spacing: 2px;
+    
+}
 /* center part */
 
 .center-point
@@ -68,10 +95,18 @@ a:hover
     width: 80%;
     margin: auto;
     margin-top: 200px; */
-    color: white;
-    position: absolute;
-    left: 200px;
-    top: 340px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    margin-top: 200px;
+    width: 85%;
+    margin: auto;
+    margin-top: 150px;
+}
+.center-point img
+{
+    width: 800px;
 }
 .center-point h1
 {
