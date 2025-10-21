@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | LifeCare</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #e6f7ff, #e9f0ff, #f0fff6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+      width: 320px;
+      text-align: center;
+    }
+    .form-container h2 {
+      color: #2e6476;
+      margin-bottom: 20px;
+    }
+    .form-container input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background: #2e6476;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #6a8d9a;
+    }
+    .error-msg {
+      color: red;
+      font-size: 12px;
+      display: none;
+      margin-top: 2px;
+    }
+    a {
+      color: #2e6476;
+      text-decoration: none;
+      margin-top: 5px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <small id="email-error" class="error-msg">Please enter a valid email.</small>
+    <input type="password" id="password" placeholder="Password">
+    <small id="password-error" class="error-msg">Please enter your password.</small>
+    <button id="login-btn">Login</button>
+    <p>Don’t have an account? <a href="register.html">Register</a></p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </div>
+
+  <script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+      const emailError = document.getElementById('email-error');
+      const passwordError = document.getElementById('password-error');
+      let valid = true;
+
+      if(!email.value || !email.value.includes('@')) {
+        emailError.style.display = 'block';
+        valid = false;
+      } else {
+        emailError.style.display = 'none';
+      }
+
+      if(!password.value) {
+        passwordError.style.display = 'block';
+        valid = false;
+      } else {
+        passwordError.style.display = 'none';
+      }
+
+      if(valid) {
+        alert('Login Successful!');
+        email.value = '';
+        password.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
